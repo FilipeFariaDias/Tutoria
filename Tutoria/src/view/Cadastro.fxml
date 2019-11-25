@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" minHeight="377.0" minWidth="500.0" prefHeight="545.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroController">
+   <children>
+      <Text fill="#908b6c" layoutX="364.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutorial de Sobrevivência na Universidade" wrappingWidth="369.13671875">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#948869" layoutX="36.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro" wrappingWidth="183.068359375">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#7c7263" layoutX="66.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo" wrappingWidth="108.037109375">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="textNome" layoutX="66.0" layoutY="150.0" prefHeight="25.0" prefWidth="298.0" promptText="Nome" />
+      <Text fill="#7c7263" layoutX="66.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código de Matricula da Universidade" wrappingWidth="269.037109375">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="textMatricula" layoutX="66.0" layoutY="248.0" prefHeight="25.0" prefWidth="165.0" promptText="Nº de matricula" />
+      <Text fill="#7c7263" layoutX="66.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail do instituto " wrappingWidth="157.037109375">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtEmail" layoutX="66.0" layoutY="339.0" prefHeight="25.0" prefWidth="298.0" promptText="E-mail " />
+      <Text fill="#7c7263" layoutX="66.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="157.037109375">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtSenha" layoutX="66.0" layoutY="427.0" prefHeight="25.0" prefWidth="298.0" promptText="Senha" />
+      <Text fill="#7c7263" layoutX="457.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vínculo com o Instituto" wrappingWidth="183.06835806369781">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#7c7263" layoutX="457.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tópicos " wrappingWidth="183.06835806369781">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="checkMatricula" layoutX="469.0" layoutY="340.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="144.0" text="Matrícula" />
+      <CheckBox fx:id="checkServicos" layoutX="469.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="205.0" text="Serviços da Universidade" />
+      <CheckBox fx:id="checkEstudos" layoutX="469.0" layoutY="364.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="172.0" text="Planejamento de estudos" />
+      <CheckBox fx:id="checkOrientacao" layoutX="469.0" layoutY="292.0" mnemonicParsing="false" text="Orientação profissional" />
+      <CheckBox fx:id="checkAdministrativo" layoutX="469.0" layoutY="412.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="211.0" text="Administrativo " />
+      <CheckBox fx:id="checkProjeto" layoutX="469.0" layoutY="388.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="211.0" text="Planejamento do projeto " />
+      <CheckBox fx:id="checkAcompanhamento" layoutX="469.0" layoutY="436.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="205.0" text="Acompanhamento de tutores " />
+      <CheckBox fx:id="checkOutros" layoutX="469.0" layoutY="460.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="153.0" text="Outros" />
+      <Button fx:id="salvarCadastro" layoutX="66.0" layoutY="479.0" mnemonicParsing="false" onAction="#salvarCadastro" prefHeight="38.0" prefWidth="79.0" text="Salvar" />
+      <Button fx:id="cancelarCadastro" layoutX="176.0" layoutY="479.0" mnemonicParsing="false" onAction="#cancelarCadastro" prefHeight="38.0" prefWidth="79.0" text="Cancelar" />
+      <RadioButton fx:id="vinculoDocente" layoutX="469.0" layoutY="150.0" mnemonicParsing="false" text="Docente">
+         <toggleGroup>
+            <ToggleGroup fx:id="checkVinculo" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="vinculoPosGrad" layoutX="469.0" layoutY="175.0" mnemonicParsing="false" text="Pós-Graduação" toggleGroup="$checkVinculo" />
+      <RadioButton fx:id="vinculoGrad" layoutX="469.0" layoutY="201.0" mnemonicParsing="false" selected="true" text="Graduação" toggleGroup="$checkVinculo" />
+      <Label fx:id="labelNome" layoutX="66.0" layoutY="184.0" prefHeight="17.0" prefWidth="165.0" textFill="#eb0202">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelMatricula" layoutX="66.0" layoutY="281.0" prefHeight="16.0" prefWidth="165.0" textFill="#eb0202">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelEmail" layoutX="66.0" layoutY="373.0" prefHeight="16.0" prefWidth="165.0" textFill="#eb0202">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSenha" layoutX="68.0" layoutY="457.0" prefHeight="9.0" prefWidth="153.0" textFill="#eb0202">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVinculo" layoutX="459.0" layoutY="226.0" prefHeight="16.0" prefWidth="165.0" textFill="#eb0202">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTopico" layoutX="466.0" layoutY="481.0" prefHeight="15.0" prefWidth="165.0" textFill="#eb0202">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

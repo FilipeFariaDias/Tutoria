@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="377.0" minWidth="500.0" prefHeight="545.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TutoriaController">
+   <children>
+      <Pane layoutX="6.0" layoutY="2.0" prefHeight="88.0" prefWidth="317.0">
+         <children>
+            <Label fx:id="nomeUsuario" layoutX="38.0" layoutY="7.0" prefHeight="29.0" prefWidth="247.0" text="Nome do Usuario">
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailUsuario" layoutX="64.0" layoutY="36.0" prefHeight="17.0" prefWidth="121.0" text="email" textFill="#ababab" />
+            <Label fx:id="matriculaUsuario" layoutX="64.0" layoutY="57.0" prefHeight="8.0" prefWidth="97.0" text="Nº de matricula" textFill="#ababab" />
+         </children>
+      </Pane>
+      <TabPane layoutY="89.0" prefHeight="456.0" prefWidth="748.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabSolicitarReuniao" text="Solicitar reunião">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab fx:id="tabHistoricoReuniao" text="Historico reuniões">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="550.0" />
+            </content>
+          </Tab>
+            <Tab fx:id="tabAgendaReuniao" text="Agenda de reuniões">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Pane layoutX="462.0" layoutY="-1.0" prefHeight="88.0" prefWidth="210.0">
+         <children>
+            <Circle fill="#e521ff71" layoutX="161.0" layoutY="44.0" radius="36.0" stroke="#f490ff" strokeType="INSIDE" />
+            <Circle fill="#ff762183" layoutX="98.0" layoutY="44.0" radius="36.0" stroke="#ffbd91" strokeType="INSIDE" />
+            <Circle fill="#ffc821a4" layoutX="36.0" layoutY="44.0" radius="36.0" stroke="#ffc71f" strokeType="INSIDE" />
+            <Text fill="#433f3f" layoutX="-15.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutorial de Sobrevivência na Universidade" textAlignment="CENTER" wrappingWidth="226.00000619888306">
+               <font>
+                  <Font name="Times New Roman Bold" size="19.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

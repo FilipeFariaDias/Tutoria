@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" minHeight="377.0" minWidth="500.0" prefHeight="545.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <children>
+      <Circle fill="#ffc71fa6" layoutX="253.0" layoutY="156.0" radius="66.0" stroke="#ffc71f" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" />
+      <Circle fill="#e91fff70" layoutX="479.0" layoutY="155.0" radius="66.0" stroke="#f490ff" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+      <Circle fill="#ff7c1f82" layoutX="360.0" layoutY="157.0" radius="65.0" stroke="#ffbd91" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" />
+      <Text fill="#433f3f" fontSmoothingType="LCD" layoutX="164.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutorial de Sobrevivência na Universidade " textAlignment="CENTER" wrappingWidth="420.13671875">
+         <font>
+            <Font name="Times New Roman Bold" size="36.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonLogin" layoutX="217.0" layoutY="422.0" mnemonicParsing="false" onAction="#entrarTutoria" prefHeight="25.0" prefWidth="288.0" text="Entrar" />
+      <Button fx:id="buttonSignup" layoutX="217.0" layoutY="457.0" mnemonicParsing="false" onAction="#loadCadastro" prefHeight="25.0" prefWidth="288.0" text="Cadastrar" />
+      <TextField fx:id="UserLogin" layoutX="217.0" layoutY="343.0" prefHeight="25.0" prefWidth="288.0" promptText="Usuário(e-mail)" />
+      <TextField fx:id="UserSenha" layoutX="216.0" layoutY="381.0" prefHeight="25.0" prefWidth="288.0" promptText="Senha" />
+   </children>
+</AnchorPane>
