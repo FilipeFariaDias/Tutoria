@@ -22,6 +22,9 @@ public class TutoriaController {
     private Label matriculaUsuario;
 
     @FXML
+    private Label vinculoUsuario;
+
+    @FXML
     private Tab tabSolicitarReuniao;
 
     @FXML
