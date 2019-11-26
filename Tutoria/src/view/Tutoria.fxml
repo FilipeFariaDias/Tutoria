@@ -24,8 +24,9 @@
                   <Font name="Arial" size="19.0" />
                </font>
             </Label>
-            <Label fx:id="emailUsuario" layoutX="64.0" layoutY="36.0" prefHeight="17.0" prefWidth="121.0" text="email" textFill="#ababab" />
-            <Label fx:id="matriculaUsuario" layoutX="64.0" layoutY="57.0" prefHeight="8.0" prefWidth="97.0" text="Nº de matricula" textFill="#ababab" />
+            <Label fx:id="emailUsuario" layoutX="49.0" layoutY="66.0" prefHeight="17.0" prefWidth="121.0" text="email" textFill="#ababab" />
+            <Label fx:id="matriculaUsuario" layoutX="49.0" layoutY="50.0" prefHeight="8.0" prefWidth="97.0" text="Nº de matricula" textFill="#ababab" />
+            <Label fx:id="vinculoUsuario" layoutX="49.0" layoutY="33.0" prefHeight="17.0" prefWidth="97.0" text="Vinculo" textFill="#ababab" />
          </children>
       </Pane>
       <TabPane layoutY="89.0" prefHeight="456.0" prefWidth="748.0" tabClosingPolicy="UNAVAILABLE">
@@ -35,8 +36,8 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <TextField fx:id="textData" layoutX="423.0" layoutY="82.0" promptText="dd/mm/aaaa" />
-                        <TextField fx:id="textHorario" layoutX="430.0" layoutY="233.0" promptText="Horario" />
-                        <TextField fx:id="textDuracao" layoutX="430.0" layoutY="159.0" promptText="Duração" />
+                        <TextField fx:id="textHorario" layoutX="423.0" layoutY="236.0" promptText="Horario" />
+                        <TextField fx:id="textDuracao" layoutX="423.0" layoutY="163.0" promptText="Duração" />
                         <RadioButton fx:id="radioServicos" layoutX="76.0" layoutY="113.0" mnemonicParsing="false" text="Serviços da universidade">
                            <toggleGroup>
                               <ToggleGroup fx:id="radioPauta" />
