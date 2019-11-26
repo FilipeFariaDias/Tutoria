@@ -117,7 +117,7 @@ import javafx.stage.Stage;
 	    
 	    
 	    @FXML 
-	    private void salvarCadastro(ActionEvent event) {
+	    private void salvarCadastro(ActionEvent event) throws IOException {
 
 		    String nome = textNome.getText();
 		    String senha = txtSenha.getText();
@@ -172,7 +172,14 @@ import javafx.stage.Stage;
 		    	alert.setHeaderText(null);
 		    	alert.setContentText("Cadastro feito com sucesso");
 		    	alert.showAndWait();
-		    	return;
+		    	
+		    	Parent cadastro = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
+		    	Scene scene = new Scene(cadastro,750,640);
+		    	
+		    	Stage janela = (Stage)((Node)event.getSource()).getScene().getWindow();
+		    	
+		    	janela.setScene(scene);
+		    	janela.show();
 		    }
 		    
 	    }
