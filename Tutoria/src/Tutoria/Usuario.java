@@ -7,36 +7,38 @@ import java.util.List;
 public class Usuario {
 	
 	
-	private int id;
-	
 
+	private int id;
 	private String nome;
 	private String email;
 	private String senha;
 	private int matricula;
 	private String vinculo;
-	private int reuniao;
-	
+	private List<Reunião> reunião;
+	private List<String> topicos;
 
-	private List<String> topico = new ArrayList<String>();
 	
 	
 	
+	public List<Reunião> getReunião() {
+		return reunião;
+	}
+	public void setReunião(List<Reunião> reunião) {
+		this.reunião = reunião;
+	}
+	public List<String> getTopicos() {
+		return topicos;
+	}
+	public void setTopicos(List<String> topicos) {
+		this.topicos = topicos;
+	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getReuniao() {
-		return reuniao;
-	}
-	public void setReuniao(int reuniao) {
-		this.reuniao = reuniao;
-	}
-	public void setTopico(List<String> topico) {
-		this.topico = topico;
-	}
+
 	
 	
 	public String getNome() {
@@ -70,6 +72,21 @@ public class Usuario {
 	public void setVinculo(String vinculo) {
 		this.vinculo = vinculo;
 	}
+	public Usuario(int id, String nome, String email, String senha, int matricula, String vinculo,
+			List<Reunião> reunião, List<String> topicos) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.email = email;
+		this.senha = senha;
+		this.matricula = matricula;
+		this.vinculo = vinculo;
+		this.reunião = reunião;
+		this.topicos = topicos;
+	}
+	
+
+
 
 	
 }
