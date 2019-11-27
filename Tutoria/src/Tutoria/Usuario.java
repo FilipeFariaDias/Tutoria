@@ -14,17 +14,17 @@ public class Usuario {
 	private String senha;
 	private int matricula;
 	private String vinculo;
-	private List<Reuni√£o> reuni√£o;
+	private List<Reuni„o> reuni„o;
 	private List<String> topicos;
 
 	
 	
 	
-	public List<Reuni√£o> getReuni√£o() {
-		return reuni√£o;
+	public List<Reuni„o> getReuni„o() {
+		return reuni„o;
 	}
-	public void setReuni√£o(List<Reuni√£o> reuni√£o) {
-		this.reuni√£o = reuni√£o;
+	public void setReuni„o(List<Reuni„o> reuni„o) {
+		this.reuni„o = reuni„o;
 	}
 	public List<String> getTopicos() {
 		return topicos;
@@ -73,7 +73,7 @@ public class Usuario {
 		this.vinculo = vinculo;
 	}
 	public Usuario(int id, String nome, String email, String senha, int matricula, String vinculo,
-			List<Reuni√£o> reuni√£o, List<String> topicos) {
+			List<Reuni„o> reuni„o, List<String> topicos) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -81,7 +81,7 @@ public class Usuario {
 		this.senha = senha;
 		this.matricula = matricula;
 		this.vinculo = vinculo;
-		this.reuni√£o = reuni√£o;
+		this.reuni„o = reuni„o;
 		this.topicos = topicos;
 	}
 	
