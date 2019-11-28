@@ -1,52 +1,55 @@
 package Tutoria;
 
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Reunião {
-
-
-	SimpleIntegerProperty id;
-	SimpleStringProperty topico;
-	SimpleStringProperty data;
-	SimpleStringProperty hora;
-	SimpleStringProperty duracao;
+public class Database {
 	
-	public int getId() {
-		return id.get();
-	}
+	private final List<Reunião> reuniões;
+	private final List<String> topicos;
+	public final List<Usuario> usuario;
 
-	public String getTopico() {
-		return topico.get();
-	}
-
-	public String getData() {
-		return data.get();
-	}
-
-	public String getHora() {
-		return hora.get();
-	}
-
-	public String getDuracao() {
-		return duracao.get();
-	}
-
-	public Reunião(Integer id, String topico, String data,
-			String hora, String duracao) {
-		super();
-		this.id = new SimpleIntegerProperty(id);
-		this.topico = new SimpleStringProperty(topico);
-		this.data = new SimpleStringProperty(data);
-		this.hora = new SimpleStringProperty(hora);
-		this.duracao = new SimpleStringProperty(duracao);
+	
+	public Database(boolean initdata) {
+		
+		this.reuniões = new ArrayList<Reunião>();
+		this.topicos = new ArrayList<String>();
+		this.usuario = new ArrayList<Usuario>();
+		
+		if(initdata) {
+			initdata();
+		}
 	}
 	
 	
+	private void initdata() {
+		Reunião r1 = new Reunião(1,"Orientação Profissional","25/12/2019","15:00","45 min");
+		Reunião r2 = new Reunião(2,"Matricula","25/12/2019","15:45","20 min");
+		Reunião r3 = new Reunião(3,"Outros","25/12/2019","16:00","40 min");
+		save(r1);
+		save(r2);
+		save(r3);
+		this.topicos.add("Orientação Profissional");
+		this.topicos.add("Matricula");
+		this.topicos.add("Outros");
+		
+		Usuario user1 = new Usuario(1, "Jose", "jose@tutoria.com","jose",123456,"Docente", reuniões, topicos);
+		save(user1);
+		
+	
+	}
+	
+	
+	public List<Usuario> getUsuario() {
+		return usuario;
+	}
 
 
+	private void save(Reunião reunião) {
+		this.reuniões.add(reunião);
+	}
 	
-	
-	
-	
+	private void save(Usuario usuario) {
+		this.usuario.add(usuario);
+	}		
 }
